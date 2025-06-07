@@ -16,24 +16,30 @@ public class Main {
 
         Account account = null;
         AccountService accountService = new AccountServiceImpl();
+        int accType;
 
-        System.out.println("\nWelcome " + name + "!");
-        System.out.println("Please choose your account type by entering the number:");
-        System.out.println("1. Saving Account\n2. Current Account");
-        System.out.print("Enter your choice (1 or 2): ");
-        int accType = sc.nextInt();
+        while (account == null) {
+            System.out.println("\nWelcome " + name + "!");
+            System.out.println("Please choose your account type by entering the number:");
+            System.out.println("1. Saving Account\n2. Current Account");
+            System.out.print("Enter your choice (1 or 2): ");
+            accType = sc.nextInt();
 
-        switch (accType) {
-            case 1 ->
-                account = new SavingAccount(name, 1000.0);
-            case 2 ->
-                account = new CurrentAccount(name, 5000.0);
-            default -> {
-                System.out.println("Invalid account type selected.");
-                System.exit(0);
+            switch (accType) {
+                case 1 ->
+                    account = new SavingAccount(name, 1000.0);
+                case 2 ->
+                    account = new CurrentAccount(name, 5000.0);
+                default -> {
+                    System.out.println("Invalid account type selected.");
+                }
             }
         }
-        System.out.print("Account created successfully for " + name + "!\n");
+
+        System.out.print("Account created successfully for " + account.getAccountHolderName() + "!\n");
+        System.out.print("\nPress Enter to continue...");
+        sc.nextLine(); // Consume the newline character
+        sc.nextLine(); // Wait for user to press Enter
 
         while (true) {
             System.out.println("\n--- Banking System ---\n1. Check Balance\n2. Deposit\n3. Withdraw\n4. Exit");
@@ -63,7 +69,7 @@ public class Main {
                     System.out.println("Invalid choice! Please try again.");
             }
 
-            System.out.println("\nPress Enter to continue...");
+            System.out.print("\nPress Enter to continue...");
             sc.nextLine(); // Consume the newline character
             sc.nextLine(); // Wait for user to press Enter
         }

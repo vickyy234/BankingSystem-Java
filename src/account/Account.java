@@ -8,7 +8,7 @@ public abstract class Account {
     public Account(String name, double balance) {
         this.accountHolderName = name;
         this.balance = balance;
-        System.out.println("Initial balance is " + balance);
+        System.out.println("\nInitial balance is " + balance);
     }
 
     public String getAccountHolderName() {
