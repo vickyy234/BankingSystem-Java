@@ -14,45 +14,20 @@ This is a simple **console-based Banking System** developed using **Java.** The 
 
 ## Getting Started 
 
-### Prerequisites
+### How to Run
 
-To run the application locally, follow these steps:  
-Before you begin, ensure the following tools are installed on your system:
-
+Before you begin, ensure the following tool is installed on your system:
 - **Java JDK 8 or higher** → [Download Java](https://www.oracle.com/java/technologies/downloads/)
-- **Git** → [Download Git](https://git-scm.com/downloads)
 
 You can check installation using:
-
 ```sh
 java --version
-git --version
 ```
-
-### Setup Instructions 
-
-#### Clone the Repository
-
-```sh
-git clone https://github.com/vickyy234/BankingSystem-Java.git
-```
-
-#### Open a terminal, navigate to the project directory, and then change into the src folder:
-
-```sh
-cd src
-```
-
-#### Compile all Java files:
-
-```sh
-javac Main.java
-```
-
-#### Run the application:
-
-```sh
-java Main
+- Download the latest ```BankingSystem.jar``` from the [Release](https://github.com/vickyy234/BankingSystem-Java/releases) page
+- Open a terminal or command prompt and navigate to the folder where the ```.jar``` file is located
+- Run the application:
+```bash
+java -jar BankingSystem.jar
 ```
 
 ---
