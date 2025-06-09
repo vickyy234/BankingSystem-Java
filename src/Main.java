@@ -1,3 +1,4 @@
+
 import account.Account;
 import account.CurrentAccount;
 import account.SavingAccount;
@@ -6,6 +7,7 @@ import service.AccountService;
 import service.AccountServiceImpl;
 
 public class Main {
+
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         String name;
@@ -36,20 +38,18 @@ public class Main {
             }
         }
 
-        System.out.print("Account created successfully for " + account.getAccountHolderName() + "!\n");
         System.out.print("\nPress Enter to continue...");
         sc.nextLine(); // Consume the newline character
         sc.nextLine(); // Wait for user to press Enter
 
         while (true) {
-            System.out.println("\n--- Banking System ---\n1. Check Balance\n2. Deposit\n3. Withdraw\n4. Exit");
+            System.out.println("\n--- Banking System ---\n1. Check Balance\n2. Deposit\n3. Withdraw\n4. Transaction History\n5. Exit");
             System.out.print("Enter your choice: ");
             int choice = sc.nextInt();
 
             switch (choice) {
-                case 1 -> {
+                case 1 ->
                     accountService.checkBalance(account);
-                }
                 case 2 -> {
                     System.out.print("Enter amount to deposit: ");
                     double depositeAmount = sc.nextDouble();
@@ -65,6 +65,8 @@ public class Main {
                     System.out.println("Thankyou for using our banking system " + account.getAccountHolderName() + "!");
                     System.exit(0);
                 }
+                case 5 ->
+                    account.displayTransaction();
                 default ->
                     System.out.println("Invalid choice! Please try again.");
             }
