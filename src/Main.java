@@ -60,13 +60,13 @@ public class Main {
                     double withdrawAmount = sc.nextDouble();
                     accountService.withdraw(account, withdrawAmount);
                 }
-                case 4 -> {
+                case 4 ->
+                    account.displayTransaction();
+                case 5 -> {
                     System.out.println("\n---Exiting---");
                     System.out.println("Thankyou for using our banking system " + account.getAccountHolderName() + "!");
                     System.exit(0);
                 }
-                case 5 ->
-                    account.displayTransaction();
                 default ->
                     System.out.println("Invalid choice! Please try again.");
             }

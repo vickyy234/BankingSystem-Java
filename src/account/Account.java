@@ -43,7 +43,7 @@ public abstract class Account {
     }
 
     public void displayTransaction() {
-        System.out.println("Transaction History for Account Number: " + getAccountNumber());
+        System.out.println("\nTransaction History for Account Number: " + getAccountNumber());
         if (transactions.isEmpty()) {
             System.out.println("No transactions yet.");
         } else {
