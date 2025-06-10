@@ -47,11 +47,12 @@ public abstract class Account {
         if (transactions.isEmpty()) {
             System.out.println("No transactions yet.");
         } else {
-            for (Transaction transaction : transactions) {
-                System.out.println(transaction);
+            int i = 0;
+            for (Transaction t : transactions) {
+                System.out.println((++i) + ". " + t);
             }
         }
-        System.out.println("Final Balance: " + getBalance());
+        System.out.printf("Final Balance: %.2f%n", getBalance());
         System.out.println("End of Transaction History.");
     }
 

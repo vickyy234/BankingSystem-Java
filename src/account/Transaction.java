@@ -17,7 +17,7 @@ public class Transaction {
 
     @Override
     public String toString() {
-        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss");
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd-MM-yyyy HH:mm:ss");
         return "[" + dateTime.format(formatter) + "] " + transactionType + ": $" + amount;
     }
 }
