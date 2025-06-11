@@ -3,8 +3,7 @@ package account;
 public class CurrentAccount extends Account {
 
     public CurrentAccount(String name, double balance) {
-        super(name, balance);
-        System.out.println("Current Account created successfully for " + name + "!");
+        super(name, balance,"Current");
     }
 
     @Override

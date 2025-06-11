@@ -46,24 +46,25 @@ public class Main {
             System.out.println("\n--- Banking System ---\n1. Check Balance\n2. Deposit\n3. Withdraw\n4. Transaction History\n5. Exit");
             System.out.print("Enter your choice: ");
             int choice = sc.nextInt();
+            System.out.println("");
 
             switch (choice) {
                 case 1 ->
                     accountService.checkBalance(account);
                 case 2 -> {
-                    System.out.print("Enter amount to deposit: ");
+                    System.out.print("Enter amount to deposit: $");
                     double depositeAmount = sc.nextDouble();
                     accountService.deposit(account, depositeAmount);
                 }
                 case 3 -> {
-                    System.out.print("Enter amount to withdraw: ");
+                    System.out.print("Enter amount to withdraw: $");
                     double withdrawAmount = sc.nextDouble();
                     accountService.withdraw(account, withdrawAmount);
                 }
                 case 4 ->
                     account.displayTransaction();
                 case 5 -> {
-                    System.out.println("\n---Exiting---");
+                    System.out.println("---Exiting---");
                     System.out.println("Thankyou for using our banking system " + account.getAccountHolderName() + "!");
                     System.exit(0);
                 }

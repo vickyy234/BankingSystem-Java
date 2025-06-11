@@ -10,11 +10,12 @@ public abstract class Account {
     private double balance;
     private final List<Transaction> transactions = new ArrayList<>();
 
-    public Account(String name, double balance) {
+    public Account(String name, double balance,String accountType) {
         this.accountHolderName = name;
         this.balance = balance;
         this.accountNumber = generateAccountNumber();
-        System.out.println("\nAccount Number is " + accountNumber);
+        System.out.println("\n" + accountType + " Account created successfully for " + name + "!");
+        System.out.println("Account Number is " + accountNumber);
         System.out.println("Initial balance is " + balance);
     }
 
@@ -43,7 +44,7 @@ public abstract class Account {
     }
 
     public void displayTransaction() {
-        System.out.println("\nTransaction History for Account Number: " + getAccountNumber());
+        System.out.println("Transaction History for Account Number: " + getAccountNumber());
         if (transactions.isEmpty()) {
             System.out.println("No transactions yet.");
         } else {

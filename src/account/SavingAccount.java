@@ -3,8 +3,7 @@ package account;
 public class SavingAccount extends Account {
 
     public SavingAccount(String name, double balance) {
-        super(name, balance);
-        System.out.println("Savings Account created successfully for " + name + "!");
+        super(name, balance,"Savings");
     }
 
     @Override
